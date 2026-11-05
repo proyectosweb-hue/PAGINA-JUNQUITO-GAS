@@ -58,7 +58,7 @@ export function HeroSection() {
             }}>
             
             <span className="w-1.5 h-1.5 rounded-full bg-[#EA580C] animate-pulse" />
-            Distribuidora de combustibles
+            Comercialización de combustibles
           </span>
 
           {/* Título */}
@@ -81,13 +81,16 @@ export function HeroSection() {
             style={{ ...rise(0.5), color: 'var(--text-secondary)' }}>
             
             Ofrecemos{' '}
+            <strong style={{ color: 'var(--text-primary)' }}>GLP</strong> para
+            hogares, vehículos y negocios. Además, operamos bajo la marca{' '}
+            <strong style={{ color: 'var(--text-primary)' }}>NEXT</strong>,
+            ofreciendo{' '}
             <strong style={{ color: 'var(--text-primary)' }}>
-              GLP, Gasoil, Gasolina
+              gasolina y gasoil
             </strong>{' '}
-            y más. Nuestra gasolina es distribuida en colaboración con{' '}
-            <strong style={{ color: 'var(--text-primary)' }}>NEXT</strong>.
-            Combustible confiable y seguro para sus vehículos, hogares y negocios
-            en República Dominicana.
+            de alta calidad. Nuestro compromiso es brindar combustibles
+            confiables, seguridad y un excelente servicio en nuestras estaciones
+            de República Dominicana.
           </p>
 
           {/* Tags de productos */}
@@ -114,7 +117,7 @@ export function HeroSection() {
               }}>
               
               <Fuel className="w-4 h-4" />
-              Powered by NEXT
+              Estaciones NEXT
             </span>
           </div>
 

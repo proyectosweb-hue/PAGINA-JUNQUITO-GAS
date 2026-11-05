@@ -6,7 +6,7 @@ const services = [
 {
   title: 'Combustibles de Calidad',
   description:
-  'Distribuimos GLP, Gasolina y Gasoil de la más alta calidad. Nuestra gasolina es suministrada en colaboración con NEXT, garantizando un producto premium que mejora el rendimiento y reduce emisiones.',
+  'Además de ofrecer GLP, también operamos bajo la marca NEXT, suministrando gasolina y gasoil de alta calidad. Nuestro compromiso es brindar combustibles confiables, seguridad y un excelente servicio en cada una de nuestras estaciones.',
   icon: Fuel,
   solid: '#F59E0B',
   from: '#F59E0B',
