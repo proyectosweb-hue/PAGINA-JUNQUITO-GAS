@@ -16,14 +16,14 @@ import { AnimateOnScroll } from './AnimateOnScroll';
 // ║     trend:  1 = subió | -1 = bajó | 0 = igual              ║
 // ║     change: el monto en pesos del cambio (0 si igual)      ║
 // ╚══════════════════════════════════════════════════════════╝
-const VIGENCIA = '4 – 10 Jul 2026';
+export const VIGENCIA = '31 Oct – 6 Nov 2026';
 
 const prices = [
-{ name: 'Gas Licuado (GLP)', price: '137.20', trend: 0, change: '0.00' },
-{ name: 'Gasolina Premium', price: '338.10', trend: -1, change: '3.00' },
-{ name: 'Gasolina Regular', price: '305.50', trend: -1, change: '5.00' },
-{ name: 'Gasoil Óptimo', price: '290.10', trend: -1, change: '3.00' },
-{ name: 'Gasoil Regular', price: '257.80', trend: -1, change: '5.00' }];
+{ name: 'Gas Licuado (GLP)', price: '135.20', trend: 0, change: '0.00' },
+{ name: 'Gasolina Premium', price: '358.10', trend: 0, change: '0.00' },
+{ name: 'Gasolina Regular', price: '317.50', trend: 0, change: '0.00' },
+{ name: 'Gasoil Óptimo', price: '318.10', trend: 0, change: '0.00' },
+{ name: 'Gasoil Regular', price: '270.80', trend: 0, change: '0.00' }];
 
 // ── Fin del bloque editable ──────────────────────────────────
 
@@ -39,7 +39,7 @@ const META: Record<
   'Gasoil Regular': { icon: Droplets, solid: '#14B8A6', from: '#2DD4BF', to: '#0D9488' }
 };
 
-const fuels = prices.map((p) => ({ ...p, ...META[p.name] }));
+export const fuels = prices.map((p) => ({ ...p, ...META[p.name] }));
 
 const MICM_URL =
 'https://micm.gob.do/direcciones/combustibles/avisos-semanales-de-precios/avisos-semanales-de-precios-de-combustibles/';
@@ -73,13 +73,15 @@ function Trend({ trend }: {trend: number;}) {
 export function PricesSection() {
   const glp = fuels[0];
   const liquids = fuels.slice(1);
+  const GlpIcon = glp.trend === 1 ? ArrowUpRight : glp.trend === -1 ? ArrowDownRight : Minus;
+  const glpLabel = glp.trend === 1 ? 'Sube' : glp.trend === -1 ? 'Baja' : 'Estable';
 
   return (
     <section
-      className="py-20 sm:py-28 transition-colors duration-300"
+      className="py-20 sm:py-28 overflow-hidden transition-colors duration-300"
       style={{ backgroundColor: 'var(--bg-primary)' }}>
       
-      <div className="container mx-auto px-6 max-w-6xl">
+      <div className="container mx-auto px-6 md:px-12 max-w-screen-2xl">
         {/* Encabezado */}
         <AnimateOnScroll>
           <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6 mb-14">
@@ -160,8 +162,8 @@ export function PricesSection() {
                   </span>
                 </div>
                 <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[11px] font-bold uppercase tracking-[0.1em] bg-white/25 text-white">
-                  <Minus className="w-3.5 h-3.5" strokeWidth={2.75} />
-                  Estable
+                  <GlpIcon className="w-3.5 h-3.5" strokeWidth={2.75} />
+                  {glpLabel}
                 </span>
               </div>
 
@@ -177,7 +179,7 @@ export function PricesSection() {
                 </span>
                 {/* Cambio vs semana anterior */}
                 <span className="inline-flex items-center gap-1.5 mt-4 px-3 py-1.5 rounded-full text-xs font-bold bg-white/20 text-white">
-                  <Minus className="w-3.5 h-3.5" strokeWidth={2.75} />
+                  <GlpIcon className="w-3.5 h-3.5" strokeWidth={2.75} />
                   {changeLabel(glp.trend, glp.change)}
                 </span>
               </div>

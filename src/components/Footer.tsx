@@ -25,7 +25,7 @@ export function Footer() {
         borderColor: 'var(--border-color)'
       }}>
       
-      <div className="container mx-auto px-6 md:px-12 max-w-6xl">
+      <div className="container mx-auto px-6 md:px-12 max-w-screen-2xl">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center gap-2 mb-6">

@@ -51,7 +51,7 @@ export function StatsGrid() {
         backgroundColor: 'var(--bg-primary)'
       }}>
       
-      <div className="container mx-auto px-6 md:px-12 max-w-6xl">
+      <div className="container mx-auto px-6 md:px-12 max-w-screen-2xl">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-5">
           {stats.map((stat, index) =>
           <AnimateOnScroll key={stat.id} delay={index * 0.1} direction="up">

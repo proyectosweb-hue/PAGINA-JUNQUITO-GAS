@@ -38,7 +38,7 @@ export function ServicesSection() {
       className="py-20 sm:py-28 transition-colors duration-300"
       style={{ backgroundColor: 'var(--bg-primary)' }}>
       
-      <div className="container mx-auto px-6 md:px-12 max-w-6xl">
+      <div className="container mx-auto px-6 md:px-12 max-w-screen-2xl">
         <AnimateOnScroll className="mb-14 max-w-3xl">
           <span
             className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] mb-4 px-3 py-1.5 rounded-full"

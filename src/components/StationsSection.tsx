@@ -79,7 +79,7 @@ export function StationsSection() {
       className="py-20 sm:py-28 transition-colors duration-300"
       style={{ backgroundColor: 'var(--bg-primary)' }}>
       
-      <div className="container mx-auto px-6 max-w-6xl">
+      <div className="container mx-auto px-6 md:px-12 max-w-screen-2xl">
         {/* Encabezado */}
         <AnimateOnScroll className="mb-14 max-w-3xl">
           <span
@@ -110,7 +110,7 @@ export function StationsSection() {
           </p>
         </AnimateOnScroll>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-5">
           {stations.map((station, index) => {
             const c = PALETTE[index % PALETTE.length];
             const num = index + 1 < 10 ? `0${index + 1}` : `${index + 1}`;
