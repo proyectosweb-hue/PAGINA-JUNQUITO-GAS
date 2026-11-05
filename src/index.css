@@ -1,0 +1,68 @@
+/* URL IMPORTS (SUCH AS FONT IMPORTS) SHOULD BE KEPT ABOVE TAILWIND IMPORTS - DO NOT DELETE THIS COMMENT */
+
+/* PLEASE NOTE: THESE TAILWIND IMPORTS SHOULD NEVER BE DELETED - DO NOT DELETE THIS COMMENT */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* DO NOT DELETE THESE TAILWIND IMPORTS, OTHERWISE THE STYLING WILL NOT RENDER AT ALL - DO NOT DELETE THIS COMMENT */
+
+@layer base {
+  :root {
+    /* Brand Colors (Constant) */
+    --color-yellow: #FCEE02;
+    --color-orange: #FB900D;
+    --color-red: #EC2424;
+    /* Light Mode (Default) */
+    --bg-primary: #FFFFFF;
+    --bg-secondary: #F9FAFB;
+    --bg-tertiary: #F3F4F6;
+    --bg-nav: rgba(255, 255, 255, 0.95);
+    --text-primary: #111827;
+    --text-secondary: #4B5563;
+    --text-muted: #6B7280;
+    /* Readable yellow for text on light backgrounds — darker for better contrast */
+    --accent-yellow-text: #7A6600;
+    --accent-yellow-bg: #FCEE02;
+    --border-color: #E5E7EB;
+    --border-color-strong: #D1D5DB;
+    --input-bg: #FFFFFF;
+    --card-bg: #FFFFFF;
+    --card-bg-hover: #F9FAFB;
+    --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+    --shadow-md: 0 4px 6px rgba(0,0,0,0.07);
+    --shadow-lg: 0 10px 15px rgba(0,0,0,0.1);
+    --dropdown-bg: #FFFFFF;
+    --dropdown-hover: #F3F4F6;
+  }
+  [data-theme='dark'] {
+    --bg-primary: #251F1F;
+    --bg-secondary: #2A2424;
+    --bg-tertiary: #332D2D;
+    --bg-nav: rgba(37, 31, 31, 0.95);
+    --text-primary: #FFFFFF;
+    --text-secondary: #9CA3AF;
+    --text-muted: #6B7280;
+    /* Yellow is readable on dark backgrounds */
+    --accent-yellow-text: #FCEE02;
+    --accent-yellow-bg: #FCEE02;
+    --border-color: #332D2D;
+    --border-color-strong: #443D3D;
+    --input-bg: #251F1F;
+    --card-bg: #2A2424;
+    --card-bg-hover: #2D2727;
+    --shadow-sm: 0 1px 2px rgba(0,0,0,0.2);
+    --shadow-md: 0 4px 6px rgba(0,0,0,0.3);
+    --shadow-lg: 0 10px 15px rgba(0,0,0,0.4);
+    --dropdown-bg: #2A2424;
+    --dropdown-hover: #332D2D;
+  }
+  body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+}
