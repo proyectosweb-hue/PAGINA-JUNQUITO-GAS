@@ -16,13 +16,13 @@ import { AnimateOnScroll } from './AnimateOnScroll';
 // ║     trend:  1 = subió | -1 = bajó | 0 = igual              ║
 // ║     change: el monto en pesos del cambio (0 si igual)      ║
 // ╚══════════════════════════════════════════════════════════╝
-export const VIGENCIA = '31 Oct – 6 Nov 2026';
+export const VIGENCIA = '7 Nov – 13 Nov 2026';
 
 const prices = [
 { name: 'Gas Licuado (GLP)', price: '135.20', trend: 0, change: '0.00' },
-{ name: 'Gasolina Premium', price: '358.10', trend: 0, change: '0.00' },
+{ name: 'Gasolina Premium', price: '362.10', trend: 1, change: '4.00' },
 { name: 'Gasolina Regular', price: '317.50', trend: 0, change: '0.00' },
-{ name: 'Gasoil Óptimo', price: '318.10', trend: 0, change: '0.00' },
+{ name: 'Gasoil Óptimo', price: '322.10', trend: 1, change: '4.00' },
 { name: 'Gasoil Regular', price: '270.80', trend: 0, change: '0.00' }];
 
 // ── Fin del bloque editable ──────────────────────────────────
