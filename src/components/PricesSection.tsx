@@ -16,7 +16,7 @@ import { AnimateOnScroll } from './AnimateOnScroll';
 // ║     trend:  1 = subió | -1 = bajó | 0 = igual              ║
 // ║     change: el monto en pesos del cambio (0 si igual)      ║
 // ╚══════════════════════════════════════════════════════════╝
-export const VIGENCIA = '14 Nov – 20 Nov 2026';
+export const VIGENCIA = '21 Nov – 27 Nov 2026';
 
 const prices = [
 { name: 'Gas Licuado (GLP)', price: '135.20', trend: 0, change: '0.00' },
